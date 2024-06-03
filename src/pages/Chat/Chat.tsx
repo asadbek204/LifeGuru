@@ -84,7 +84,7 @@ export default function Chat() {
                 let className: string = styles.chat__message
                 if (!value.isBot) className += ' ' + styles.chat__message_my
                 return (
-                <div className={ className }>
+                <div key={value.at} className={ className }>
                     <div className={ `${styles['chat__message-container']}  ${(!value.isBot)?styles['chat__message-container_my']: ''}` }>
                         <div className={ styles['chat__message-content'] }>{ value.text }</div>
                         <div className={ styles['chat__message-footer'] }>
