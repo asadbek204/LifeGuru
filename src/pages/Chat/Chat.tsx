@@ -45,7 +45,7 @@ export default function Chat() {
 
     function messageOnChange(event: FormEvent<HTMLInputElement>) {
         const element = event.target as HTMLInputElement
-        if (element.value) setUserMessage(element.value)
+        setUserMessage(element.value)
     }
 
     function sendFile() {
