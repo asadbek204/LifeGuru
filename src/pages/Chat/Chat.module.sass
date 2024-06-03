@@ -1,0 +1,172 @@
+.chat_closed
+    position: absolute
+    bottom: 20px
+    right: 10px
+    width: 3vw
+    height: 2vw
+    background-color: transparent
+    background-image: url('@assets/chat-icon.png')
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    &__name
+        width: auto
+        height: auto
+        color: #0e6e0e
+        visibility: visible
+        transform: translateY(1.1vw)
+        
+.chat
+    position: absolute
+    width: 20vw
+    height: 100%
+    top: 0
+    bottom: 0
+    right: 0
+    border: 1px solid black
+    border-radius: 20px
+    background-color: white
+    
+    &__arrow
+        width: 40px
+        height: 40px
+        background-color: transparent
+
+    &__header
+        width: 100%
+        height: 5%
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        background-color: #82d3ff
+        border-top-right-radius: 20px
+        border-top-left-radius: 20px
+
+    &__title
+        font-size: 26px
+        font-weight: 600
+        color: white
+        margin-right: 10px
+
+    &__status
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 5px
+        padding-top: 5px
+        color: white
+        font-size: 16px
+        font-weight: 600
+
+    &__status-dots
+        display: flex
+        justify-content: flex-start
+        align-items: flex-end
+        gap: 3px
+        & *
+            width: 5px
+            height: 5px
+            background-color: white
+            border-radius: 50%
+            animation: status-writing .7s infinite .7s
+        
+            &:first-child
+                animation: status-writing .7s infinite 1.4s
+            &:last-child
+                animation: status-writing .7s infinite
+
+    &__viewport
+        width: 100%
+        height: 89%
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        overflow-y: scroll
+        padding: 10px
+        background: linear-gradient(180deg, rgba(197,241,254,1) 0%, rgba(228,249,251,1) 34%, rgba(255,255,255,1) 82%)
+
+        &::-webkit-scrollbar
+            width: 0
+        
+
+    &__footer
+        width: 100%
+        height: 6%
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        padding: 5px 10px 15px 10px
+        border-bottom-right-radius: 20px
+        border-bottom-left-radius: 20px
+        background-color: #82d3ff
+
+    &__send-file
+        width: 30px
+        height: 30px
+
+    &__open-file
+        width: 100%
+        height: 100%
+        background-color: transparent
+
+    &__message-input
+        height: 100%
+        width: 80%
+        padding: 0 10px
+        border-radius: 10px
+
+    &__message-send
+        width: 30px
+        height: 30px
+        background-color: transparent
+
+    &__message
+        width: 100%
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+        &_my
+            justify-content: flex-end
+
+    &__message-container
+        position: relative
+        min-height: 45px
+        background-color: white
+        padding: 10px
+        padding-bottom: 20px
+        border-radius: 10px
+        border-bottom-left-radius: 0
+
+        &_my
+            border-radius: 10px
+            border-bottom-right-radius: 0
+
+    &__message-footer
+        text-align: end
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        padding: 2px
+        padding-right: 5px
+        height: 20px
+        background-color: 
+
+    &__message-date
+        font-size: 10px
+
+
+@keyframes status-writing
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+        
