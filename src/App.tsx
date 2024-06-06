@@ -5,9 +5,6 @@ import LoginPage from '@pages/login/Login'
 import TUser from '@types'
 import GlobalContext from '@contexts'
 
-
-let a: integer = 10
-
 const user: TUser = { email: '', name: '', isAuthorized: false }
 
 function App() {
