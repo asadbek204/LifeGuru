@@ -71,7 +71,7 @@ export default function Login() {
             <Input className={ styles.form__input } name='password' placeholder='password' type="password" value={ password } onChange={ passwordOnChange } />
             <Input className={ styles.form__input } name='confirm-password' placeholder='confirm-password' type="password" value={ confirmPassword } onChange={ confirmPasswordOnChange }/>
             <Button className={ styles.form__submit } type="submit" onClick={ onSubmit }>Sign Up</Button>
-            <button className={ styles.form__switch } type='button' data-form={ AuthTypes.signIn } onClick={ switcher }>sign up</button>
+            <button className={ styles.form__switch } type='button' data-form={ AuthTypes.signIn } onClick={ switcher }>sign in</button>
         </form>
     </div>
     )
