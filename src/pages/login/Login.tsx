@@ -61,15 +61,15 @@ export default function Login() {
     return (
     <div className={ styles.container }>
         <form className={ `${ styles.form } ${ getClass(true) }` }>
-            <Input className={ styles.form__input } name='email' type='email' value={ email } onChange={ emailOnChange } />
-            <Input className={ styles.form__input } name='password' type='password' value={ password } onChange={ passwordOnChange } />
+            <Input className={ styles.form__input } name='email' placeholder='email' type='email' value={ email } onChange={ emailOnChange } />
+            <Input className={ styles.form__input } name='password' placeholder='password' type='password' value={ password } onChange={ passwordOnChange } />
             <Button className={ styles.form__submit } type='submit' onClick={ onSubmit }>Sign In</Button>
             <button className={ styles.form__switch } type='button' data-form={ AuthTypes.signUp } onClick={ switcher }>sign up</button>
         </form>
         <form className={ `${ styles.form } ${ getClass(false) }` }>
-            <Input className={ styles.form__input } name='email' type='email' value={ email } onChange={ emailOnChange } />
-            <Input className={ styles.form__input } name='password' type="password" value={ password } onChange={ passwordOnChange } />
-            <Input className={ styles.form__input } name='confirm-password' type="password" value={ confirmPassword } onChange={ confirmPasswordOnChange }/>
+            <Input className={ styles.form__input } name='email' placeholder='email' type='email' value={ email } onChange={ emailOnChange } />
+            <Input className={ styles.form__input } name='password' placeholder='password' type="password" value={ password } onChange={ passwordOnChange } />
+            <Input className={ styles.form__input } name='confirm-password' placeholder='confirm-password' type="password" value={ confirmPassword } onChange={ confirmPasswordOnChange }/>
             <Button className={ styles.form__submit } type="submit" onClick={ onSubmit }>Sign Up</Button>
             <button className={ styles.form__switch } type='button' data-form={ AuthTypes.signIn } onClick={ switcher }>sign up</button>
         </form>
